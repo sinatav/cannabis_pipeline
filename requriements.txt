@@ -2,3 +2,4 @@ pandas
 cannlytics
 sqlalchemy
 mlxtend
+apache-airflow
