@@ -1,4 +1,5 @@
 import pandas as pd
+from cannabis_data.common.exceptions import AnalyzerError
 
 class Analyzer:
     """
@@ -34,3 +35,15 @@ class Analyzer:
 
     def store_ranking(self, n=20):
         return self.df.groupby("store_id")["sales"].sum().sort_values(ascending=False).head(n)
+    
+    def run_all(self):
+        try:
+            self.total_revenue()
+            self.monthly_sales()
+            self.average_basket_size()
+            self.top_products()
+            self.store_ranking()
+
+            return self.df
+        except Exception as e:
+            raise AnalyzerError(str(e))

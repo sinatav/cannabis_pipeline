@@ -6,3 +6,6 @@ class PreprocessError(Exception):
 
 class DBError(Exception):
     pass
+
+class AnalyzerError(Exception):
+    pass

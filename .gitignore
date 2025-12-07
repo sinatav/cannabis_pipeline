@@ -1,1 +1,5 @@
 venv/
+cannabis_data/schedulers/__pycache__
+cannabis_data/loading/__pycache__
+cannabis_data/common/__pycache__
+cannabis_data/__pycache__
