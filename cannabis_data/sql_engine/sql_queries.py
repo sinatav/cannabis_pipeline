@@ -1,5 +1,8 @@
 # Lightweight query library. Expand as needed.
 
+
+# Note: strftime used for SQLite. For Postgres use to_char(date, 'YYYY-MM')
+
 GET_MONTHLY_SALES = """
 SELECT strftime('%Y-%m', date) AS year_month,
        SUM(sales) AS total_sales,
